@@ -1,29 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <title>Select PT</title>
-  <link rel="stylesheet" href="style.css">
+    <title>School Project</title>
 </head>
 <body>
-
-  <h1>Select PT</h1>
-  
-  <select id="SelectPT" name="projectSelect" onchange="openProject()">
-    <option value="">None</option>
-    <option value="PT1.html">PT1</option>
-    <option value="PT2.html">PT2</option>
-  </select>
-  
-  <script>
-    function openProject() {
-      const select = document.getElementById('projectSelect');
-      const project = select.value;
-      if (project) {
-        window.location.href = project;  // Navigates to the selected file in same tab
-      }
-    }
-  </script>
-  
+    <h1>Welcome to My School Project</h1>
+    <p><a href="PT1.html">Bio Data</a></p>
+    <p><a href="PT2.html">Registration Form</a></p>
 </body>
 </html>
