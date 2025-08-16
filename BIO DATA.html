@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Biodata Form</title>
+</head>
+<body>
+<h1><marquee>My Biodata Form</marquee></h1>
+
+<fieldset>
+    <legend><h2>Personal Information</h2></legend>
+    <form method="post" action="create">
+        <label>First Name: <input type="text" required maxlength="20"></label>
+        <label>Middle Name: <input type="text" required maxlength="20"></label>
+        <label>Last Name: <input type="text" required maxlength="20"></label>
+        <div>
+            <br>
+            <label>Gender:</label>
+            <label><input type="radio" name="gender" value="Male"> Male</label>
+            <label><input type="radio" name="gender" value="Female"> Female</label>
+            <label><input type="radio" name="gender" value="Others"> Others</label>
+        </div>
+        <br>
+        <div>
+            <label>Date of Birth: <input type="date" required></label>
+        </div>
+        <br>
+        <div>
+            <label>Password: <input type="password" required maxlength="8"></label>
+        </div>
+        <br>
+        <div>
+            <label>Email: <input type="email" required pattern="[a-z0-9._%+-]+@gmail\.com$"></label>
+        </div>
+        <br>
+        <div>
+            <label>Height: <input type="text" placeholder="Height in cm"></label>
+        </div>
+        <br>
+        <div>
+            <label>Weight: <input type="text" placeholder="Weight in kg"></label>
+        </div>
+        <br>
+        <div>
+            <label>Phone Number: <input type="tel" maxlength="11" placeholder="+63"></label>
+        </div>
+    </form>
+</fieldset>
+
+<fieldset>
+    <legend><h2>Education</h2></legend>
+    <div>
+        <label>School Name: <input type="text" size="25"></label>
+    </div>
+    <br>
+    <div>
+        <label for="strandSelect">Strand: </label>
+        <select id="strandSelect" onchange="showSubjects()">
+            <option value="TVL">TVL Strand</option>
+            <option value="Academic">Academic Strand</option>
+        </select>
+    </div>
+    <br>
+    <div id="subjectGroup">
+        <label for="subjectSelect">Section: </label>
+        <select id="subjectSelect"></select>
+    </div>
+</fieldset>
+
+<input type="submit" value="Submit">
+
+<script>
+    function showSubjects() {
+        const strandSelect = document.getElementById('strandSelect');
+        const subjectSelect = document.getElementById('subjectSelect');
+        const result = document.getElementById('result');
+
+        if (strandSelect.value === 'TVL') {
+            subjectSelect.innerHTML = `
+                <option value="ICT1">ICT1</option>
+                <option value="ICT2">ICT2</option>
+                <option value="ICT3">ICT3</option>
+                <option value="SMAW1">SMAW1</option>
+                <option value="SMAW2">SMAW2</option>
+                <option value="SMAW3">SMAW3</option>
+                <option value="COOK1">Cookery1</option>
+                <option value="COOK2">Cookery2</option>
+                <option value="COOK3">Cookery3</option>
+            `;
+        } else if (strandSelect.value === 'Academic') {
+            subjectSelect.innerHTML = `
+                <option value="STEM1">STEM1</option>
+                <option value="STEM2">STEM2</option>
+                <option value="STEM3">STEM3</option>
+                <option value="STEM4">STEM3</option>
+                <option value="STEM5">STEM3</option>
+                <option value="STEM6">STEM3</option>
+                <option value="STEM7">STEM3</option>
+                <option value="HUMSS1">HUMSS1</option>
+                <option value="HUMSS2">HUMSS2</option>
+                <option value="HUMSS3">HUMSS3</option>
+                <option value="ABM1">ABM1</option>
+                <option value="ABM2">ABM2</option>
+                <option value="ABM3">ABM3</option>
+            `;
+        }
+    }
+
+    window.onload = showSubjects;
+</script>
+</body>
+</html>
