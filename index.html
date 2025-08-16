@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Select PT</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Select PT</h1>
+  
+  <select id="SelectPT" name="projectSelect" onchange="openProject()">
+    <option value="">None</option>
+    <option value="PT1.html">PT1</option>
+    <option value="PT2.html">PT2</option>
+  </select>
+  
+  <script>
+    function openProject() {
+      const select = document.getElementById('projectSelect');
+      const project = select.value;
+      if (project) {
+        window.location.href = project;  // Navigates to the selected file in same tab
+      }
+    }
+  </script>
+  
+</body>
+</html>
