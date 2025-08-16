@@ -5,11 +5,11 @@
     <title>My Biodata Form</title>
 </head>
 <body>
+<form method="post" action="create">
 <h1><marquee>My Biodata Form</marquee></h1>
 
 <fieldset>
     <legend><h2>Personal Information</h2></legend>
-    <form method="post" action="create">
         <label>First Name: <input type="text" required maxlength="20"></label>
         <label>Middle Name: <input type="text" required maxlength="20"></label>
         <label>Last Name: <input type="text" required maxlength="20"></label>
@@ -44,7 +44,6 @@
         <div>
             <label>Phone Number: <input type="tel" maxlength="11" placeholder="+63"></label>
         </div>
-    </form>
 </fieldset>
 
 <fieldset>
@@ -108,5 +107,6 @@
 
     window.onload = showSubjects;
 </script>
+</form>
 </body>
 </html>
