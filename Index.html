@@ -2,12 +2,197 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>School Projects</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #000000;
+      background-image: url("Portfolio/black.JPG");
+      background-size: cover;
+      background-attachment: fixed;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background:
+      border-radius: 50%;
+      top: -250px;
+      right: -250px;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    body::after {
+      content: '';
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      bottom: -200px;
+      left: -200px;
+      animation: float 8s ease-in-out infinite reverse;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(20px); }
+    }
+
+    .container {
+      max-width: 800px;
+      width: 100%;
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 {
+      color: white;
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 50px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      animation: fadeInDown 0.8s ease-out;
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      padding: 20px;
+    }
+
+    .project-card {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      padding: 40px 30px;
+      text-align: center;
+      text-decoration: none;
+      color: #333;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      position: relative;
+      overflow: hidden;
+      animation: fadeInUp 0.8s ease-out backwards;
+    }
+
+    .project-card:nth-child(1) { animation-delay: 0.2s; }
+    .project-card:nth-child(2) { animation-delay: 0.4s; }
+    .project-card:nth-child(3) { animation-delay: 0.6s; }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .project-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+      transition: left 0.5s ease;
+    }
+
+    .project-card:hover::before {
+      left: 100%;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .project-icon {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .project-title {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #667eea;
+      margin-bottom: 10px;
+    }
+
+    .project-description {
+      font-size: 0.95rem;
+      color: #666;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+      }
+
+      .projects-grid {
+        gap: 20px;
+        padding: 10px;
+      }
+
+      .project-card {
+        padding: 30px 20px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>My School Projects</h1>
-    <p><a href="PT1.html">PT1 - Registration Form</a></p>
-    <p><a href="PT2.html">PT2 - Biodata Form</a></p>
-    <p><a href="Portfolio/Index.html">Portfolio - Angelo Lim</a></p>
+  <div class="container">
+    <h1> My School Projects </h1>
+    <div class="projects-grid">
+      <a href="PT1.html" class="project-card">
+        <span class="project-icon">📝</span>
+        <div class="project-title">PT1</div>
+        <div class="project-description">Registration Form</div>
+      </a>
+      <a href="PT2.html" class="project-card">
+        <span class="project-icon">👤</span>
+        <div class="project-title">PT2</div>
+        <div class="project-description">Biodata Form</div>
+      </a>
+      <a href="Portfolio/Index.html" class="project-card">
+        <span class="project-icon">💼</span>
+        <div class="project-title">Portfolio</div>
+        <div class="project-description">Angelo Lim</div>
+      </a>
+    </div>
+  </div>
 </body>
 </html>
