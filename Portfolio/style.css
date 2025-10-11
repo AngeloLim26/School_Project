@@ -44,23 +44,24 @@ nav a {
 .logo {
     font-size: 24px;
     font-weight: bold;
-    display: inline-block;
+    display: inline-block !important;
     line-height: 0;
+    width: 60px !important;
+    height: 60px !important;
+    overflow: hidden;
 }
 
 .logo-img {
-    height: 40px;
-    max-height: 40px;
-    width: auto;
-    max-width: 150px;
+    height: 60px;
+    max-height: 60px;
+    width: 60px;
+    max-width: 60px;
+    min-height: 60px;
+    min-width: 60px;
     display: block;
     object-fit: contain;
     transition: transform 0.3s ease;
     vertical-align: middle;
-}
-
-.logo-img:hover {
-    transform: scale(1.05);
 }
 
 .nav-links {
