@@ -49,13 +49,14 @@ nav a {
 }
 
 .logo-img {
-    height: 50px;
-    max-height: 50px;
+    height: 40px;
+    max-height: 40px;
     width: auto;
-    max-width: 200px;
+    max-width: 150px;
     display: block;
     object-fit: contain;
     transition: transform 0.3s ease;
+    vertical-align: middle;
 }
 
 .logo-img:hover {
