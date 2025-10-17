@@ -290,3 +290,245 @@ nav a {
 .btn:hover {
     background-color: #45a049;
 }
+
+/* Mobile Responsiveness - Pure CSS */
+@media screen and (max-width: 768px) {
+    /* Navigation */
+    nav {
+        flex-wrap: wrap;
+        padding: 10px 15px;
+    }
+    
+    .logo {
+        width: 50px !important;
+        height: 50px !important;
+    }
+    
+    .logo-img {
+        width: 50px;
+        height: 50px;
+        max-width: 50px;
+        max-height: 50px;
+        min-width: 50px;
+        min-height: 50px;
+    }
+    
+    .nav-links {
+        width: 100%;
+        flex-direction: column;
+        margin-top: 10px;
+        margin-left: 0;
+    }
+    
+    .nav-links a {
+        padding: 10px 0;
+        margin: 5px 0;
+        border-bottom: 1px solid #333;
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* Profile Container */
+    .profile-container {
+        flex-direction: column;
+        padding: 20px 5%;
+        min-height: auto;
+        text-align: center;
+    }
+    
+    .profile-text {
+        padding-right: 0;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    .profile-text h1 {
+        font-size: 2em;
+    }
+    
+    .profile-text h2 {
+        font-size: 1.3em;
+    }
+    
+    .profile-text p {
+        font-size: 1em;
+        max-width: 100%;
+    }
+    
+    .profile-image img {
+        max-width: 250px;
+        width: 100%;
+        height: auto;
+    }
+    
+    /* Social Links */
+    .social-links {
+        position: relative;
+        left: auto;
+        bottom: auto;
+        justify-content: center;
+        margin: 30px 0 20px 0;
+        padding: 0 20px;
+    }
+    
+    /* Container */
+    .container {
+        padding: 15px;
+    }
+    
+    /* Section Title */
+    .section-title {
+        font-size: 1.5em;
+        margin: 20px 0;
+    }
+    
+    /* Hobby/Skill Cards */
+    .hobby {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .hobby h3 {
+        font-size: 1.2em;
+    }
+    
+    .hobby p {
+        font-size: 0.95em;
+    }
+    
+    /* Contact Page */
+    .contact {
+        margin: 20px auto;
+        padding: 15px;
+    }
+    
+    .contact-item {
+        padding: 15px;
+    }
+    
+    .contact-form {
+        padding: 20px 15px;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+        font-size: 16px; /* Prevents zoom on iOS */
+        box-sizing: border-box;
+    }
+    
+    .btn {
+        width: 100%;
+        padding: 15px;
+        font-size: 1.1rem;
+    }
+    
+    /* Copyright */
+    .copyright-nav {
+        padding: 10px 15px;
+    }
+    
+    .copyright {
+        font-size: 0.8em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Extra small devices */
+    body {
+        padding: 0 0 50px 0;
+    }
+    
+    nav {
+        padding: 8px 10px;
+    }
+    
+    .logo {
+        width: 40px !important;
+        height: 40px !important;
+    }
+    
+    .logo-img {
+        width: 40px;
+        height: 40px;
+        max-width: 40px;
+        max-height: 40px;
+        min-width: 40px;
+        min-height: 40px;
+    }
+    
+    .nav-links a {
+        font-size: 0.9em;
+        padding: 8px 0;
+    }
+    
+    .profile-container {
+        padding: 15px 5%;
+    }
+    
+    .profile-text h1 {
+        font-size: 1.5em;
+    }
+    
+    .profile-text h2 {
+        font-size: 1.1em;
+    }
+    
+    .profile-text p {
+        font-size: 0.9em;
+    }
+    
+    .profile-image img {
+        max-width: 200px;
+    }
+    
+    .social-links {
+        gap: 10px;
+        margin: 20px 0 15px 0;
+    }
+    
+    .social-links img {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .container {
+        padding: 10px;
+    }
+    
+    .section-title {
+        font-size: 1.3em;
+        margin: 15px 0;
+    }
+    
+    .hobby {
+        padding: 12px;
+        margin-bottom: 12px;
+    }
+    
+    .hobby h3 {
+        font-size: 1.1em;
+    }
+    
+    .hobby p {
+        font-size: 0.9em;
+    }
+    
+    .contact {
+        margin: 15px auto;
+        padding: 10px;
+    }
+    
+    .contact-item {
+        padding: 12px;
+    }
+    
+    .contact-form {
+        padding: 15px 10px;
+    }
+    
+    .btn {
+        padding: 12px;
+        font-size: 1rem;
+    }
+}
