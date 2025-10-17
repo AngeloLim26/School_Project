@@ -291,7 +291,6 @@ nav a {
     background-color: #45a049;
 }
 
-/* Mobile Responsiveness - Pure CSS */
 @media screen and (max-width: 768px) {
     /* Navigation */
     nav {
