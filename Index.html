@@ -17,13 +17,14 @@
       background-image: url("Portfolio/black.JPG");
       background-size: cover;
       background-attachment: fixed;
+      background-position: center;
       min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
       padding: 20px;
       position: relative;
-      overflow: hidden;
+      overflow-x: hidden;
     }
 
     body::before {
@@ -87,6 +88,7 @@
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 30px;
       padding: 20px;
+      width: 100%;
     }
 
     .project-card {
@@ -158,13 +160,15 @@
 
     @media (max-width: 768px) {
       body {
-        padding: 10px;
+        padding: 15px 10px;
+        background-attachment: scroll;
+        align-items: flex-start;
+        padding-top: 30px;
       }
 
       body::before,
       body::after {
-        width: 300px;
-        height: 300px;
+        display: none;
       }
 
       h1 {
@@ -175,11 +179,13 @@
       .projects-grid {
         grid-template-columns: 1fr;
         gap: 20px;
-        padding: 10px;
+        padding: 10px 0;
       }
 
       .project-card {
         padding: 30px 20px;
+        width: 100%;
+        max-width: 100%;
       }
 
       .project-icon {
@@ -196,23 +202,31 @@
     }
 
     @media (max-width: 480px) {
+      body {
+        padding: 20px 10px;
+        min-height: 100vh;
+      }
+
       h1 {
-        font-size: 1.5rem;
-        margin-bottom: 20px;
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+        padding: 0 10px;
       }
 
       .container {
         padding: 0;
+        width: 100%;
       }
 
       .projects-grid {
         gap: 15px;
-        padding: 5px;
+        padding: 5px 0;
       }
 
       .project-card {
-        padding: 25px 15px;
+        padding: 30px 20px;
         border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
       }
 
       .project-icon {
@@ -226,6 +240,41 @@
 
       .project-description {
         font-size: 0.85rem;
+        line-height: 1.4;
+      }
+    }
+
+    @media (max-width: 360px) {
+      h1 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+      }
+
+      .project-card {
+        padding: 25px 15px;
+      }
+
+      .project-icon {
+        font-size: 1.8rem;
+      }
+
+      .project-title {
+        font-size: 1rem;
+      }
+
+      .project-description {
+        font-size: 0.8rem;
+      }
+    }
+
+    @media (hover: none) and (pointer: coarse) {
+      .project-card:active {
+        transform: translateY(-5px) scale(1.01);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+      }
+
+      .project-card::before {
+        display: none;
       }
     }
   </style>
