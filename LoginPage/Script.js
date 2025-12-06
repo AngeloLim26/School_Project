@@ -35,8 +35,3 @@ function checkLogin() {
 }
 
 loginButton.onclick = checkLogin;
-passBox.onkeydown = function (event) {
-  if (event.key === "Enter") {
-    checkLogin();
-  }
-};
