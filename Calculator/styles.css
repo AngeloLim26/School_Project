@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Calculator wrapper */
+.calculator {
+    background: #1a1a1a;
+    border-radius: 30px;
+    padding: 25px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    width: 390px;
+}
+
+/* Display section */
+.display {
+    margin-bottom: 25px;
+}
+
+#display {
+    width: 100%;
+    padding: 20px;
+    font-size: 40px;
+    font-weight: 300;
+    color: #ffffff;
+    background: transparent;
+    border: none;
+    text-align: right;
+    outline: none;
+}
+
+#display::placeholder {
+    color: #999;
+}
+
+/* Buttons grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+/* Base button styling */
+.btn {
+    padding: 20px;
+    font-size: 24px;
+    font-weight: 600;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Number buttons - dark blue/purple */
+.btn.number {
+    background: #4a5f8f;
+    color: white;
+}
+
+.btn.number:hover {
+    background: #5a6f9f;
+}
+
+/* AC button - red */
+.btn.ac {
+    background: #e84c3d;
+    grid-column: 1;
+}
+
+.btn.ac:hover {
+    background: #f05a4b;
+}
+
+/* Operator buttons - orange/gold */
+.btn.operator {
+    background: #d4a048;
+    color: white;
+}
+
+.btn.operator:hover {
+    background: #e4b058;
+}
+
+/* Equals button - blue, spans 2 columns */
+.btn.equals {
+    background: #3b82f6;
+    grid-column: 1 / 3;
+}
+
+.btn.equals:hover {
+    background: #4b92ff;
+}
+.func {
+    background: #d4a017;
+    color: black;
+}
+
+/* Orange operator buttons ( + - × ÷ ) */
+.op {
+    background: #ff9f0a;
+    color: white;
+}
+
+/* Blue equal button */
+.equal {
+    background: #007aff;
+    color: white;
+    grid-column: span 2; /* Makes "=" wide like the image */
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+}
