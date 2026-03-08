@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mary Grace Coffee Menu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles.css">
+</head>
+<body>
+
+    <!-- NAVIGATION BAR -->
+    <nav class="main-nav">
+        <div class="logo">☕ Mary Grace Coffee</div>
+        <ul class="nav-links">
+            <li><a href="Index.html">Home</a></li>
+            <li><a href="About_Us.html">About Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main class="page">
+
+        <!-- LEFT SIDE: Menu Section -->
+        <section class="menu-section">
+            <header class="hero">
+                <h1 class="hero-title">Mary Grace Coffee</h1>
+                <p class="hero-subtitle">Build your own study snack combo with budget‑friendly drinks and bites.</p>
+            </header>
+
+            <h2 class="section-title">Our Signatures</h2>
+
+            <!-- Menu cards will be added here by Index.js -->
+            <div id="menu-grid" class="menu-grid"></div>
+        </section>
+
+        <!-- RIGHT SIDE: Order Summary -->
+        <aside class="order-summary">
+            <h2>🧾 Your Order</h2>
+
+            <ul id="order-items" class="order-items">
+                <!-- Order items appear here -->
+            </ul>
+
+            <p class="order-count">Items selected: <span id="item-count">0</span></p>
+            <p class="order-total">Total: <span id="order-total">₱0.00</span></p>
+
+            <button class="checkout-button" id="checkout-button">Checkout</button>
+            <button class="checkout-button secondary" id="clear-order">Clear Order</button>
+        </aside>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <p>© 2026 Mary Grace Coffee</p>
+    </footer>
+
+    <!-- BACK TO TOP BUTTON -->
+    <button id="backToTopBtn">⬆ Back to Top</button>
+
+    <!-- JAVASCRIPT -->
+    <!-- Index.js controls the menu, order system, and back to top button -->
+    <script src="Index.js"></script>
+
+</body>
+</html>
