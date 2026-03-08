@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light only">
   <title>School Projects</title>
   <style>
     * {
@@ -13,11 +14,7 @@
 
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #000000;
-      background-image: url("Portfolio/black.JPG");
-      background-size: cover;
-      background-attachment: fixed;
-      background-position: center;
+      background-color: #0a0a0a;
       min-height: 100vh;
       display: flex;
       justify-content: center;
@@ -25,35 +22,21 @@
       padding: 20px;
       position: relative;
       overflow-x: hidden;
+      color-scheme: light;
     }
 
-    body::before {
-      content: '';
-      position: absolute;
-      width: 500px;
-      height: 500px;
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 50%;
-      top: -250px;
-      right: -250px;
-      animation: float 6s ease-in-out infinite;
-    }
-
-    body::after {
-      content: '';
-      position: absolute;
-      width: 400px;
-      height: 400px;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 50%;
-      bottom: -200px;
-      left: -200px;
-      animation: float 8s ease-in-out infinite reverse;
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(20px); }
+    /* Separate background div that always covers the full screen */
+    #bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-image: url("Portfolio/black.JPG");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: 0;
     }
 
     .container {
@@ -92,17 +75,18 @@
     }
 
     .project-card {
-      background: rgba(255, 255, 255, 0.95);
+      background: #ffffff !important;
       border-radius: 20px;
       padding: 40px 30px;
       text-align: center;
       text-decoration: none;
-      color: #333;
+      color: #333333 !important;
       transition: all 0.3s ease;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
       position: relative;
       overflow: hidden;
       animation: fadeInUp 0.8s ease-out backwards;
+      color-scheme: light;
     }
 
     .project-card:nth-child(1) { animation-delay: 0.2s; }
@@ -149,26 +133,20 @@
     .project-title {
       font-size: 1.3rem;
       font-weight: bold;
-      color: #667eea;
+      color: #667eea !important;
       margin-bottom: 10px;
     }
 
     .project-description {
       font-size: 0.95rem;
-      color: #666;
+      color: #666666 !important;
     }
 
     @media (max-width: 768px) {
       body {
         padding: 15px 10px;
-        background-attachment: scroll;
         align-items: flex-start;
         padding-top: 30px;
-      }
-
-      body::before,
-      body::after {
-        display: none;
       }
 
       h1 {
@@ -280,35 +258,44 @@
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1> My School Projects </h1>
-    <div class="projects-grid">
-      <a href="Calculator/index.html" class="project-card">
-        <span class="project-icon">🧮</span>
-        <div class="project-title">Calculator</div>
-        <div class="project-description">Simple Calculator App</div>
-      </a>
-      <a href="LoginPage/Index.html" class="project-card">
-        <span class="project-icon">🔑</span>
-        <div class="project-title">Login Page</div>
-        <div class="project-description">User Authentication</div>
-      </a>
-      <a href="PT1.html" class="project-card">
-        <span class="project-icon">📝</span>
-        <div class="project-title">PT1</div>
-        <div class="project-description">Registration Form</div>
-      </a>
-      <a href="PT2.html" class="project-card">
-        <span class="project-icon">👤</span>
-        <div class="project-title">PT2</div>
-        <div class="project-description">Biodata Form</div>
-      </a>
-      <a href="Portfolio/Index.html" class="project-card">
-        <span class="project-icon">💼</span>
-        <div class="project-title">Portfolio</div>
-        <div class="project-description">Angelo Lim</div>
-      </a>
-    </div>
+
+<!-- This div is the background, always fixed behind everything -->
+<div id="bg"></div>
+
+<div class="container">
+  <h1> My School Projects </h1>
+  <div class="projects-grid">
+    <a href="Calculator/index.html" class="project-card">
+      <span class="project-icon">🧮</span>
+      <div class="project-title">Calculator</div>
+      <div class="project-description">Simple Calculator App</div>
+    </a>
+    <a href="LoginPage/Index.html" class="project-card">
+      <span class="project-icon">🔑</span>
+      <div class="project-title">Login Page</div>
+      <div class="project-description">User Authentication</div>
+    </a>
+    <a href="PT1.html" class="project-card">
+      <span class="project-icon">📝</span>
+      <div class="project-title">PT1</div>
+      <div class="project-description">Registration Form</div>
+    </a>
+    <a href="PT2.html" class="project-card">
+      <span class="project-icon">👤</span>
+      <div class="project-title">PT2</div>
+      <div class="project-description">Biodata Form</div>
+    </a>
+    <a href="Portfolio/Index.html" class="project-card">
+      <span class="project-icon">💼</span>
+      <div class="project-title">Portfolio</div>
+      <div class="project-description">Angelo Lim</div>
+    </a>
+    <a href="MaryGraceCoffee/Index.html" class="project-card">
+      <span class="project-icon">☕</span>
+      <div class="project-title">Mary Grace Coffee</div>
+      <div class="project-description">Angelo Lim</div>
+    </a>
   </div>
+</div>
 </body>
 </html>
